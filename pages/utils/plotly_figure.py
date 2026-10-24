@@ -32,6 +32,25 @@ def plotly_table(dataframe):
     return fig
 
 
+def Moving_average_forecast(dataframe):
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=dataframe.index,
+        y=dataframe['Close'],
+        mode='lines',
+        name='Close Price'
+    ))
+    fig.update_layout(
+        height=500,
+        margin=dict(l=0, r=20, t=20, b=0),
+        plot_bgcolor='white',
+        paper_bgcolor='#e1efff',
+        xaxis_title='Date',
+        yaxis_title='Price'
+    )
+    return fig
+
+
 def filter_data(dataframe, num_period):
     if num_period == '1mo':
         date = dataframe.index[-1] + dateutil.relativedelta.relativedelta(months=-1)

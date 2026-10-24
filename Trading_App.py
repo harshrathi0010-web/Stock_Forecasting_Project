@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Trading Guide App : Bar_Chart")
+st.title("Trading Guide App")
 
 st.header("we provide the greatest plateform for collect all information prior to investigate in stocks")
 

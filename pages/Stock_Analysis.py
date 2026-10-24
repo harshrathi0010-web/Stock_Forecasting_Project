@@ -189,14 +189,18 @@ if data1.empty:
 if chart_type == "Candle" and indicators == "RSI":
     st.plotly_chart(candlestick(data1, num_period), use_container_width=True)
     st.plotly_chart(RSI(data1, num_period), use_container_width=True)
+
 elif chart_type == "Candle" and indicators == "MACD":
     st.plotly_chart(candlestick(data1, num_period), use_container_width=True)
     st.plotly_chart(MACD(data1, num_period), use_container_width=True)
+
 elif chart_type == "Line" and indicators == "RSI":
     st.plotly_chart(close_chart(data1, num_period), use_container_width=True)
     st.plotly_chart(RSI(data1, num_period), use_container_width=True)
+
 elif chart_type == "Line" and indicators == "Moving Average":
     st.plotly_chart(moving_average_chart(data1, num_period), use_container_width=True)
+    
 elif chart_type == "Line" and indicators == "MACD":
     st.plotly_chart(close_chart(data1, num_period), use_container_width=True)
     st.plotly_chart(MACD(data1, num_period), use_container_width=True)
